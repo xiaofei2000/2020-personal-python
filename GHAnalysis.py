@@ -33,7 +33,7 @@ def project_action_times(data):  #定义函数求每一个项目的 4 种事件�
     return project_times
 
 
-def per_map_to_pro(data):   #定义函数求每一个人在每一个项目的 4 种事件的数量。
+def per_map_to_pro(data):  #定义函数求每一个人在每一个项目的 4 种事件的数量。
     per_map_pro_times = {}
     for item in data:
         per_map_pro_times[item['repo']['id']] = {}
@@ -49,7 +49,7 @@ def per_map_to_pro(data):   #定义函数求每一个人在每一个项目的 4 
     return per_map_pro_times
 
 
-def load_data():
+def load_data():  #解析 json 文件，并将数据存入 data
     with open("./data.json", 'r+', encoding='utf-8') as fp:
         data = [json.loads(line) for line in fp.readlines()]
     return data
