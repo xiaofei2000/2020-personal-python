@@ -50,7 +50,7 @@ def personal_action_times(data):
 
 
 def load_data():
-    with open("./data2.json", 'r+', encoding='utf-8') as fp:
+    with open("./data.json", 'r+', encoding='utf-8') as fp:
         data = [json.loads(line) for line in fp.readlines()]
     return data
 
