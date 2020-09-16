@@ -3,7 +3,7 @@
 import json
 
 
-def per_map_to_pro(data):
+def per_map_to_pro(data):  #定义函数求每一个人在每一个项目的 4 种事件的数量
     per_map_pro_times = {}
     for item in data:
         per_map_pro_times[item['repo']['id']] = {}
@@ -19,7 +19,7 @@ def per_map_to_pro(data):
     return per_map_pro_times
 
 
-def project_action_times(data):
+def project_action_times(data):    #定义函数求每一个项目的 4 种事件的数量
     project_times = {}
     for item in data:
         if not isinstance(project_times.get(item["repo"]['id'], None), dict):
@@ -34,7 +34,7 @@ def project_action_times(data):
     return project_times
 
 
-def personal_action_times(data):
+def personal_action_times(data):  #定义函数求个人的 4 种事件的数量
     personal_times = {}
     for item in data:
         if not isinstance(personal_times.get(item["actor"]['id'], None), dict):
